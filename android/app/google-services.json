@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "838122088105",
+    "project_id": "my-social-apps-3bef8",
+    "storage_bucket": "my-social-apps-3bef8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838122088105:android:e01024d7cb49b8ae43abb8",
+        "android_client_info": {
+          "package_name": "com.floom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838122088105-a6dhpfvfsm2a6edm92heei6979l1h9b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdd5WLQhezgKvQCFga5SrINdqDiXypWOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838122088105-a6dhpfvfsm2a6edm92heei6979l1h9b3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
