@@ -6,7 +6,7 @@
   </a>
 
 <h3 align="center">Video conference Application</h3>
-<!-- https://imgur.com/a/omasyYx --> 
+<!-- all pics - https://imgur.com/a/omasyYx --> 
 <a href="https://docs.flutter.dev/get-started/install/windows"><img src="https://img.shields.io/badge/-Flutter-blue" alt="Flutter"> </a>
 <a href="https://git-scm.com/download/win"> <img src="https://img.shields.io/badge/-Git-blueviolet" alt="Git"></a>
 <a href="https://console.firebase.google.com/"><img src="https://img.shields.io/badge/-Firebase-orange" alt="FireBase"></a>

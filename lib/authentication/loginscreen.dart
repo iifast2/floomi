@@ -1,3 +1,4 @@
+import 'package:floom/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_colors/flutter_gradient_colors.dart';
 import 'package:floom/variables.dart';
@@ -17,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-   // int count;
+
     return Scaffold(
         backgroundColor: Colors.grey[250],
         body: Stack(
@@ -93,23 +94,24 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
 
                   const SizedBox(height: 40),
-
                     InkWell(
                       onTap: () => {
-                       // int count = 0,
+                        //int count = 0,
                         FirebaseAuth.instance.signInWithEmailAndPassword(
                             email: emailcontroller.text,
                             password: passwordcontroller.text),
-                        Navigator.pop(context),
-                        //Navigator.popUntil(context, (route) => false),
-                        // count++ == 2,
 
-                        /*
-                           // this is how it should be
-                         Navigator.popUntil(context, (route)){
-                          return count++ == 2;
+                        Navigator.pop(context),
+                        Navigator.popUntil(context,
+                            (route) => route.settings.name == "homepage"),
+
+// Solved: https://stackoverflow.com/a/63228673
+
+                         // this is how it should be
+                        /* Navigator.popUntil(context, (route)){
+                           return count++ == 2;
                         */
-              //},
+             // },
 
                       },
                       child: Container(
