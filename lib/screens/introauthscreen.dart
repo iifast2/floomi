@@ -1,6 +1,8 @@
+import 'package:floom/authentication/navigateauthscreen.dart';
 import 'package:floom/variables.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+
 
 class IntroAuthScreen extends StatefulWidget {
   const IntroAuthScreen({Key? key}) : super(key: key);
@@ -9,6 +11,8 @@ class IntroAuthScreen extends StatefulWidget {
   State<IntroAuthScreen> createState() => _IntroAuthScreenState();
 }
 
+
+
 class _IntroAuthScreenState extends State<IntroAuthScreen> {
   @override
   Widget build(BuildContext context) {
@@ -16,9 +20,9 @@ class _IntroAuthScreenState extends State<IntroAuthScreen> {
       pages: [
         PageViewModel(
             title: "Welcome",
-            body:"Welcome to FOAM, the best video conference app",
+            body:"Welcome to FOOM, the best video conference app",
           image: Center(
-            child: Image.asset('images/welcome.png',height: 175,),
+            child: Image.asset('images/theteam.jpg',), //welcome.png
 
           ),
           decoration: PageDecoration(
@@ -32,7 +36,7 @@ class _IntroAuthScreenState extends State<IntroAuthScreen> {
             title: "Join or Start meetings",
             body:"Easy to use interface, Join our start meetings in fast time",
             image: Center(
-              child: Image.asset('images/conference.png',height: 175,),
+              child: Image.asset('images/conference.png',height: 175,), // child: Image.asset('images/conference.png',height: 175,),
 
             ),
             decoration: PageDecoration(
@@ -61,7 +65,7 @@ class _IntroAuthScreenState extends State<IntroAuthScreen> {
 
 
     onDone: (){
-        print("Done !!!");
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>NavigateAuthScreen()));
     },
 
     onSkip: (){

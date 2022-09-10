@@ -1,5 +1,5 @@
 name: floom
-description: A new Flutter project.
+description: Application for Video Calling - Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -36,7 +36,7 @@ dependencies:
   uuid:
   google_fonts:
   intl:
-  introduction_screen:
+  introduction_screen:  #^3.0.1  # https://pub.dev/packages/introduction_screen
   pin_code_fields:
   flutter_custom_clippers:
   image_picker:

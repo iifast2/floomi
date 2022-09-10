@@ -29,6 +29,13 @@
             {
               "client_id": "838122088105-a6dhpfvfsm2a6edm92heei6979l1h9b3.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "838122088105-lct47t6edmmh3m3c4uf65se843g9bfsc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.floom"
+              }
             }
           ]
         }

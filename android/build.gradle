@@ -6,8 +6,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
-    /*  classpath 'com.android.tools.build:gradle:3.6.3' */
+        // tut // classpath 'com.android.tools.build:gradle:3.6.3'
+        // new version that comes with create new project //  classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:3.6.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // added this from firebase //
         classpath 'com.google.gms:google-services:4.3.13'
@@ -32,3 +33,4 @@ subprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
