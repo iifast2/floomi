@@ -1,4 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:floom/screens/profilescreen.dart';
+import 'package:floom/screens/videoconferencescreen.dart';
 import 'package:floom/variables.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +13,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int page = 0;
+  List pageoptions = [
+    VideoConferenceScreen(),
+    ProfileScreen(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[250],
       bottomNavigationBar: BottomNavigationBar(
 
         backgroundColor: Colors.white,
@@ -42,14 +49,7 @@ class _HomePageState extends State<HomePage> {
 
         ],
       ),
-      body: InkWell(
-        onTap: (){
-
-          FirebaseAuth.instance.signOut();
-
-        }
-      ),
-
+      body: pageoptions[page],
     );
   }
 }
