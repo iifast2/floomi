@@ -55,7 +55,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: Column(
               children: [
                 // I added a Const
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 //  TextField(style: mystyle(18),Colors.black),    // I added cursorColor
@@ -71,7 +71,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 InkWell(

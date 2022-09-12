@@ -20,7 +20,7 @@ class _IntroAuthScreenState extends State<IntroAuthScreen> {
       pages: [
         PageViewModel(
             title: "Welcome",
-            body:"Welcome to FOOM, the best video conference app",
+            body:"Welcome to FLOOMI , the best video conference app",
           image: Center(
             child: Image.asset('images/theteam.jpg',), //welcome.png
 

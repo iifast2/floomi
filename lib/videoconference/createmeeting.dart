@@ -16,10 +16,9 @@ class _CreateMeetingState extends State<CreateMeeting> {
 
   createcode() {
     setState(() {
-      code = Uuid().v1().substring(0, 6);
+      code = Uuid().v1().substring(0, 4);
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -70,21 +69,5 @@ class _CreateMeetingState extends State<CreateMeeting> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
