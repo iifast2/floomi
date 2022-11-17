@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:floom/authentication/navigateauthscreen.dart';
 import 'package:floom/variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
@@ -163,7 +164,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                               ),
                         ),
-                      )
+                      ),
+                      const SizedBox(height: 50),
+                      InkWell(
+                        onTap: () {
+                          FirebaseAuth.instance.signOut();
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const NavigateAuthScreen(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          height: 40,
+                          decoration: const BoxDecoration(
+                              gradient: LinearGradient(
+                                  colors: GradientColors.meanFruit)),
+                          child: Center(
+                            child: Text(
+                              "Logout",
+                              style: mystyle((20), Colors.white),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 )

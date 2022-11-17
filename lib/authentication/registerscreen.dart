@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:floom/screens/homepage.dart';
 //import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(                                           // I added Const
+                    const SizedBox(
+                      // I added Const
                       height: 50,
                     ),
                     Container(
@@ -72,21 +74,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         controller: emailcontroller,
                         decoration: InputDecoration(
                           hintText: " Email ",
-                          prefixIcon: const Icon(Icons.email),                // I added Const
+                          prefixIcon: const Icon(Icons.email), // I added Const
                           hintStyle: mystyle(20, Colors.grey, FontWeight.w700),
                         ),
                       ),
                     ),
                     SizedBox(height: 20),
-                    Container(
+                  Container(
                       width: MediaQuery.of(context).size.width / 1.7,
                       child: TextField(
                         style: mystyle(18, Colors.black),
                         //keyboardType: TextInputType.emailAddress,
                         controller: passwordcontroller,
                         decoration: InputDecoration(
-                          hintText: " Password ",
-                          prefixIcon: const Icon(Icons.lock),                                   // I added Const
+                          hintText: "Password should be at least 6 characters.",
+                          prefixIcon: const Icon(Icons.lock), // I added Const
                           hintStyle: mystyle(20, Colors.grey, FontWeight.w700),
                         ),
                       ),
@@ -106,12 +108,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 40),                                       // I added Const
+                    const SizedBox(height: 40), // I added Const
                     InkWell(
                       onTap: () => {
-
-                 //    try{
-                        FirebaseAuth.instance.createUserWithEmailAndPassword(
+                        //    try{
+                        FirebaseAuth.instance
+                            .createUserWithEmailAndPassword(
                                 email: emailcontroller.text,
                                 password: passwordcontroller.text)
                             .then((signeduser) {
@@ -122,7 +124,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             'uid': signeduser.user!.uid,
                           });
 
-                        Navigator.pop(context);
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomePage(),
+                            ),
+                          );
 
 /*                     } on FirebaseAuthException catch (e) {
                      print(e);
@@ -130,10 +137,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                      Scaffold.of(context).ShowSnackBar(snackbar);
                       }
                           */
-                        })  //;
-
-
-
+                        }) //;
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width / 2,
@@ -141,14 +145,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         decoration: BoxDecoration(
                             gradient: const LinearGradient(
                               colors:
-                                  GradientColors.skyBlue,                                       // I added this const
+                                  GradientColors.skyBlue, // I added this const
                             ),
                             borderRadius: BorderRadius.circular(20)),
                         child: Center(
                           child: Text(
                             "Sign Up",
                             style: mystyle(25,
-                                Colors.white),                              //change the 25 value as you like
+                                Colors.white), //change the 25 value as you like
                           ),
                         ),
                       ),

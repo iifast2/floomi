@@ -16,7 +16,7 @@ class _CreateMeetingState extends State<CreateMeeting> {
 
   createcode() {
     setState(() {
-      code = Uuid().v1().substring(0, 4);
+      code = Uuid().v1().substring(0, 6);
     });
   }
 

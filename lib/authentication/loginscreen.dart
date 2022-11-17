@@ -12,13 +12,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         backgroundColor: Colors.grey[250],
         body: Stack(
@@ -31,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     gradient: LinearGradient(colors: GradientColors.blue)),
                 child: Center(
                   child: Image.asset(
-                    'images/tlogo.png',
+                    'images/teamlogo.png',
                     height: 400, //100
                   ),
                 )),
@@ -60,40 +58,37 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
-                    const SizedBox(height: 50,),
-
+                    const SizedBox(
+                      height: 50,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width / 1.7,
                       child: TextField(
-                        style: mystyle(18,Colors.black),
+                        style: mystyle(18, Colors.black),
                         keyboardType: TextInputType.emailAddress,
                         controller: emailcontroller,
                         decoration: InputDecoration(
                           hintText: " Email ",
-                          prefixIcon: const Icon(Icons.email),                  // I added Const
-                          hintStyle: mystyle(20,Colors.grey,FontWeight.w700),
+                          prefixIcon: const Icon(Icons.email), // I added Const
+                          hintStyle: mystyle(20, Colors.grey, FontWeight.w700),
                         ),
                       ),
                     ),
-
                     const SizedBox(height: 20),
-
                     Container(
                       width: MediaQuery.of(context).size.width / 1.7,
                       child: TextField(
-                        style: mystyle(18,Colors.black),
+                        style: mystyle(18, Colors.black),
                         //keyboardType: TextInputType.emailAddress,
                         controller: passwordcontroller,
                         decoration: InputDecoration(
                           hintText: " Password ",
-                          prefixIcon: const Icon(Icons.lock),                  // I added Const
-                          hintStyle: mystyle(20,Colors.grey,FontWeight.w700),
+                          prefixIcon: const Icon(Icons.lock), // I added Const
+                          hintStyle: mystyle(20, Colors.grey, FontWeight.w700),
                         ),
                       ),
                     ),
-
-                  const SizedBox(height: 40),
+                    const SizedBox(height: 40),
                     InkWell(
                       onTap: () => {
                         //int count = 0,
@@ -101,43 +96,44 @@ class _LoginScreenState extends State<LoginScreen> {
                             email: emailcontroller.text,
                             password: passwordcontroller.text),
 
-                        Navigator.pop(context),
-                        Navigator.popUntil(context,
-                            (route) => route.settings.name == "homepage"),
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomePage(),
+                          ),
+                        ),
 
 // Solved: https://stackoverflow.com/a/63228673
 
-                         // this is how it should be
+                        // this is how it should be
                         /* Navigator.popUntil(context, (route)){
                            return count++ == 2;
                         */
-             // },
-
+                        // },
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width / 2,
-                        height: 50,                                   //change the height as you like
+                        height: 50, //change the height as you like
                         decoration: BoxDecoration(
                             gradient: const LinearGradient(
                               colors: GradientColors
-                                  .beautifulGreen,                    // I added this const
+                                  .beautifulGreen, // I added this const
                             ),
                             borderRadius: BorderRadius.circular(20)),
                         child: Center(
                           child: Text(
                             "Sign In",
-                            style: mystyle(25, Colors.white),    //change the 25 value as you like
+                            style: mystyle(25,
+                                Colors.white), //change the 25 value as you like
                           ),
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
             )
           ],
-        )
-    );
+        ));
   }
 }

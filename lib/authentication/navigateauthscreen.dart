@@ -28,7 +28,7 @@ class _NavigateAuthScreenState extends State<NavigateAuthScreen> {
                     gradient: LinearGradient(colors: GradientColors.blue)),
                 child: Center(
                   child: Image.asset(
-                    'images/tlogo.png',
+                    'images/floomi.png', //tlogo.png
                     height: 400, //100
                   ),
                 )),

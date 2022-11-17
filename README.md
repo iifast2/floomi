@@ -5,7 +5,7 @@
     <img src="https://i.imgur.com/528fu0O.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Video conference Application</h3>
+<h3 align="center">Video conference Application - final version 1</h3>
 <!-- all pics - https://imgur.com/a/omasyYx --> 
 <a href="https://docs.flutter.dev/get-started/install/windows"><img src="https://img.shields.io/badge/-Flutter-blue" alt="Flutter"> </a>
 <a href="https://git-scm.com/download/win"> <img src="https://img.shields.io/badge/-Git-blueviolet" alt="Git"></a>
