@@ -1,9 +1,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+  
   <a href="https://github.com/iifast2/floomi">
     <img src="https://i.imgur.com/528fu0O.png" alt="Logo" width="80" height="80">
   </a>
+  
+<a href="https://github.com/iifast2/floomi">
+    <img src="https://i.imgur.com/OokyKtp.png" alt="Logo" width="80" height="80">
+  </a>
+  
 
 <h3 align="center">Flutter Video conference Application - final version 1 (web)</h3>
 <!-- all pics - https://imgur.com/a/omasyYx --> 
