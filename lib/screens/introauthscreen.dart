@@ -1,4 +1,4 @@
-import 'package:floom/authentication/navigateauthscreen.dart';
+import 'package:floom/auth/navigateauthscreen.dart';
 import 'package:floom/variables.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
